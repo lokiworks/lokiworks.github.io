@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="generator" content="Docusaurus v2.0.0-alpha.69">
 <title data-react-helmet="true">Blog | Loki</title><meta data-react-helmet="true" property="og:title" content="Blog | Loki"><meta data-react-helmet="true" name="description" content="Blog"><meta data-react-helmet="true" property="og:description" content="Blog"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docusaurus_language" content="en"><meta data-react-helmet="true" name="docusaurus_tag" content="default"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/styles.1898bf5d.css">
-<link rel="preload" href="/styles.7841dba6.js" as="script">
-<link rel="preload" href="/runtime~main.2ec2455f.js" as="script">
-<link rel="preload" href="/main.1ae7001e.js" as="script">
-<link rel="preload" href="/common.83d1f54a.js" as="script">
-<link rel="preload" href="/24.a1915cd1.js" as="script">
-<link rel="preload" href="/ccc0114c.e3094819.js" as="script">
-<link rel="preload" href="/82eb25e1.ecd296cf.js" as="script">
-<link rel="preload" href="/bbcab255.c16aa47a.js" as="script">
-<link rel="preload" href="/c46f2f4c.1a1d6203.js" as="script">
-<link rel="preload" href="/8dab7729.f85e3311.js" as="script">
-<link rel="preload" href="/b2b675dd.bab4841e.js" as="script">
+<link rel="preload" href="/styles.e19f307d.js" as="script">
+<link rel="preload" href="/runtime~main.da2c2546.js" as="script">
+<link rel="preload" href="/main.a4b40676.js" as="script">
+<link rel="preload" href="/common.96e52504.js" as="script">
+<link rel="preload" href="/24.4d1dbfb0.js" as="script">
+<link rel="preload" href="/ccc0114c.05b604bb.js" as="script">
+<link rel="preload" href="/82eb25e1.b08fafbd.js" as="script">
+<link rel="preload" href="/bbcab255.b91ac265.js" as="script">
+<link rel="preload" href="/c46f2f4c.e4fbe4a9.js" as="script">
+<link rel="preload" href="/8dab7729.32c82ffc.js" as="script">
+<link rel="preload" href="/b2b675dd.e7ce6a81.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -93,16 +93,16 @@
 </span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button></div></div><blockquote><p><strong>Tips:</strong></p><ul><li>将创建拓展点的任务交给业务使用方，业务使用方使用@Bean告知Spring如何构建对象，并将拓展的xxxApi传入到XXXClientFallbackFactory对象中</li><li>实现FallbackFactory接口的目的只是为了知晓请求失败的原因，比如：服务down机、网络超时等，所以GenericFallbackFactory中只要记录下日志就可以了</li><li>当业务使用方提供了拓展点，则使用业务方提供的拓展点，否则不会做任何处理。为什么不在GenericFallbackFactory中构造新的对象从而在方法中返回默认的返回体？这个问题留给读者思考，如有疑问请通过文末的<a href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</a>与我沟通</li><li>通过ResponseEntityDTO中的success、successAndDataNotNull对arch-client返回体做校验，safeWrap用于arch-app层，包装arch-domain层的返回体</li></ul></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="优化版本v3"></a>优化版本V3<a class="hash-link" href="#优化版本v3" title="Direct link to heading">#</a></h3><ul><li>目前的骨架都是通过写好的模板，提供出去。可以通过一种自由的方式让用户去选择想要生成的骨架及使用的组件等。读者可以参考<a href="https://start.aliyun.com/" target="_blank" rel="noopener noreferrer">Aliyun Java Initializer</a>的实现</li><li>针对不同的业务提供不同的骨架</li><li><a href="#%E4%BC%98%E5%8C%96%E7%89%88%E6%9C%ACv2">优化版本V2</a>的方式能够满足单一技术栈的诉求，但是对于多技术栈显得无力。<a href="#%E4%BC%98%E5%8C%96%E7%89%88%E6%9C%ACv2">优化版本V2</a>的方式本质上还是基于契约编程。可以从文档契约上去思考，
 定义接口无非是定义好接口的出入参以及方法名。这块可以基于<a href="https://www.openapis.org/" target="_blank" rel="noopener noreferrer">openapi</a>去做，当接口定义完毕可发布时。接口的使用方，可以在接口文档的平台中生成各自技术栈的基于当前文档库版本号对应的库，再细化的可以生成当前技术栈使用的框架(spring cloud、dubbo、grpc等)对应的库(lib、dll、jar等)</li><li>往往规范的出发点都是好的，如何保证使用骨架的人按照规范去执行？可以通过提供各种ide(vscode、idea等)插件，去提示用户。即使提示了，用户还是没有执行。这时可以通过骨架质检平台，扫描接入骨架的业务代码库，定期做质检分析。这块可以基于<a href="https://www.archunit.org/" target="_blank" rel="noopener noreferrer">archunit</a>去做</li><li>此处留给读者思考，如果你有其他好的想法，请通过文末的<a href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</a>与我沟通</li></ul><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="结语"></a>结语<a class="hash-link" href="#结语" title="Direct link to heading">#</a></h3><blockquote><ul><li>不断的优化设计，是为了使用的人能够更高效并快乐的工作</li><li>所有的软件设计并不是一蹴而就的</li><li>软件是要分层的，但也要注意粒度。比较的典型的案例:TCP/IP VS OSI/RM</li><li>一个好的软件设计者，一定是一个好的产品设计者</li><li>软件的设计最终一定要形成闭环</li><li>软件的设计是基于特定的业务使用场景的</li></ul></blockquote><p>今天是母亲节，祝天下所有的母亲节日快乐!</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="联系方式"></a>联系方式<a class="hash-link" href="#联系方式" title="Direct link to heading">#</a></h3><ul><li>欢迎订阅我的公众号，这里主要会发表些软件工程上的一些想法及实践
 <img alt="微信公众号" src="/assets/images/weixin-87aa5dc8406a7bddb435f74a81d745e9.jpg"></li></ul></section><footer class="row margin-vert--lg"><div class="col"><strong>Tags:</strong><a class="margin-horiz--sm" href="/blog/tags/design">design</a></div></footer></article><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></main></div></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/doc1">Style Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/doc1">Second Doc</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow</a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord</a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/lokiworks/lokiworks.github.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 lokiworks, Inc. Built with Docusaurus.</div></div></div></footer></div>
-<script src="/styles.7841dba6.js"></script>
-<script src="/runtime~main.2ec2455f.js"></script>
-<script src="/main.1ae7001e.js"></script>
-<script src="/common.83d1f54a.js"></script>
-<script src="/24.a1915cd1.js"></script>
-<script src="/ccc0114c.e3094819.js"></script>
-<script src="/82eb25e1.ecd296cf.js"></script>
-<script src="/bbcab255.c16aa47a.js"></script>
-<script src="/c46f2f4c.1a1d6203.js"></script>
-<script src="/8dab7729.f85e3311.js"></script>
-<script src="/b2b675dd.bab4841e.js"></script>
+<script src="/styles.e19f307d.js"></script>
+<script src="/runtime~main.da2c2546.js"></script>
+<script src="/main.a4b40676.js"></script>
+<script src="/common.96e52504.js"></script>
+<script src="/24.4d1dbfb0.js"></script>
+<script src="/ccc0114c.05b604bb.js"></script>
+<script src="/82eb25e1.b08fafbd.js"></script>
+<script src="/bbcab255.b91ac265.js"></script>
+<script src="/c46f2f4c.e4fbe4a9.js"></script>
+<script src="/8dab7729.32c82ffc.js"></script>
+<script src="/b2b675dd.e7ce6a81.js"></script>
 </body>
 </html>
