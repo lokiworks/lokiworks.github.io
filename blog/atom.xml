@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lokiworks.github.io/blog</id>
+    <title>Loki Blog</title>
+    <updated>2020-12-26T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lokiworks.github.io/blog"/>
+    <subtitle>Loki Blog</subtitle>
+    <icon>https://lokiworks.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Git工程实践]]></title>
+        <id>git-engineering-practices</id>
+        <link href="https://lokiworks.github.io/blog/git-engineering-practices"/>
+        <updated>2020-12-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Git工程实践]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据库脚本版本管理工程实践]]></title>
+        <id>database-version-management</id>
+        <link href="https://lokiworks.github.io/blog/database-version-management"/>
+        <updated>2020-09-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[已经好久没写博客了，最近一直在研读leveldb的源码，进展不是很顺利。想要写出一篇自己的见解还要一段时间。正好最近在数据库脚本版本管理控制方面有一些自己的想法与实践，拿出来与各位分享。]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何阅读源码]]></title>
+        <id>how-to-read-sourcecode</id>
+        <link href="https://lokiworks.github.io/blog/how-to-read-sourcecode"/>
+        <updated>2020-08-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[如何阅读源码]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[构建单体仓库]]></title>
+        <id>build-monorepo</id>
+        <link href="https://lokiworks.github.io/blog/build-monorepo"/>
+        <updated>2020-05-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[构建单体仓库]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[软件设计]]></title>
+        <id>software-design</id>
+        <link href="https://lokiworks.github.io/blog/software-design"/>
+        <updated>2020-05-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[软件设计]]></summary>
+    </entry>
+</feed>

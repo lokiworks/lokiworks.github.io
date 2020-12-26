@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Loki Blog</title>
+        <link>https://lokiworks.github.io/blog</link>
+        <description>Loki Blog</description>
+        <lastBuildDate>Sat, 26 Dec 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Git工程实践]]></title>
+            <link>https://lokiworks.github.io/blog/git-engineering-practices</link>
+            <guid>git-engineering-practices</guid>
+            <pubDate>Sat, 26 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Git工程实践]]></description>
+        </item>
+        <item>
+            <title><![CDATA[数据库脚本版本管理工程实践]]></title>
+            <link>https://lokiworks.github.io/blog/database-version-management</link>
+            <guid>database-version-management</guid>
+            <pubDate>Sat, 26 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[已经好久没写博客了，最近一直在研读leveldb的源码，进展不是很顺利。想要写出一篇自己的见解还要一段时间。正好最近在数据库脚本版本管理控制方面有一些自己的想法与实践，拿出来与各位分享。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[如何阅读源码]]></title>
+            <link>https://lokiworks.github.io/blog/how-to-read-sourcecode</link>
+            <guid>how-to-read-sourcecode</guid>
+            <pubDate>Sun, 02 Aug 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[如何阅读源码]]></description>
+        </item>
+        <item>
+            <title><![CDATA[构建单体仓库]]></title>
+            <link>https://lokiworks.github.io/blog/build-monorepo</link>
+            <guid>build-monorepo</guid>
+            <pubDate>Wed, 20 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[构建单体仓库]]></description>
+        </item>
+        <item>
+            <title><![CDATA[软件设计]]></title>
+            <link>https://lokiworks.github.io/blog/software-design</link>
+            <guid>software-design</guid>
+            <pubDate>Sat, 09 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[软件设计]]></description>
+        </item>
+    </channel>
+</rss>
