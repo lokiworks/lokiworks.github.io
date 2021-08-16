@@ -12,7 +12,7 @@
         <id>git-engineering-practices</id>
         <link href="https://lokiworks.github.io/blog/git-engineering-practices"/>
         <updated>2020-12-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Git工程实践]]></summary>
+        <summary type="html"><![CDATA[在2015年12月8号的时候，注册了github。正是通过github接触了git，那时对于我而言，只是觉得从一个svn工具切换到另外一个git工具，使用上并无太大的差别。后期使用的过程中踩过一些坑，通过官方的教程，学习了git内部的原理，通过做实验慢慢的加深了对git的理解。这里将一些经验上的总结、实践分享出来，希望能够帮助各位在git的学习之路上少走些弯路。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[数据库脚本版本管理工程实践]]></title>
@@ -26,20 +26,20 @@
         <id>how-to-read-sourcecode</id>
         <link href="https://lokiworks.github.io/blog/how-to-read-sourcecode"/>
         <updated>2020-08-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[如何阅读源码]]></summary>
+        <summary type="html"><![CDATA[出于某一些原因（工作的需要、个人技术上的自我提升）,时常需要阅读一些开源项目的源码。面对一大坨的代码，该如何阅读源码？]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[构建单体仓库]]></title>
         <id>build-monorepo</id>
         <link href="https://lokiworks.github.io/blog/build-monorepo"/>
         <updated>2020-05-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[构建单体仓库]]></summary>
+        <summary type="html"><![CDATA[本文主要介绍在单体仓库上的一些思考及实践，至于是选择单仓还是多仓，需要根据实际的情况去做选择。]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[软件设计]]></title>
         <id>software-design</id>
         <link href="https://lokiworks.github.io/blog/software-design"/>
         <updated>2020-05-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[软件设计]]></summary>
+        <summary type="html"><![CDATA[本来是想写篇软件分层的文章，想想介绍的内容不单单是要阐述软件分层的思想。下面以一个具体的例子进入主题]]></summary>
     </entry>
 </feed>
